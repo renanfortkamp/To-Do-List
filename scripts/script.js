@@ -18,18 +18,23 @@ const createTask = ()=>{
     document.querySelector('input').value = "";
   for(let i=0 ; i < todoList.length; i++){
     let addTolist = document.querySelector('ul');
-    let task = document.createTextNode(todoList[i]);
     let li = document.createElement('li');
-    li.appendChild(task);
+    let check = document.createElement('input');
+    let task = document.createTextNode(todoList[i]);
+    let deleteTask = document.createElement('button');
+    let x = document.createTextNode("Excluir");
     addTolist.appendChild(li);
-    let deleteTask = document.createElement('span');
-    let x = document.createTextNode("X");
-    deleteTask.appendChild(x);
-    li.appendChild(deleteTask);
-    deleteTask.addEventListener('click', ()=>{
-        todoList.splice(i,1);
-        createTask();
-      } 
-    )
+      li.appendChild(check);
+        check.type = 'checkbox'
+        document.querySelector('li').children[0].class = 'check'
+      li.appendChild(task);
+      li.appendChild(deleteTask);
+        deleteTask.appendChild(x);
+        deleteTask.addEventListener('click', ()=>{
+            todoList.splice(i,1);
+            createTask();
+          } 
+        )
   }
-}  
+}
+
