@@ -18,12 +18,14 @@ const createTask = ()=>{
     document.querySelector('input').value = "";
   for(let i= 0 ; i < todoList.length; i++){
     const ul = document.querySelector('ul');
+    const div = document.createElement('div');	
     const li = document.createElement('li');
     const task = document.createTextNode(todoList[i]);
-    ul.appendChild(li);
+    ul.appendChild(div);
+    div.appendChild(li);
     createCheckbox(li)
     li.appendChild(task);
-    createDeleteTask(li,i);
+    createDeleteTask(div,i);
   }
 }
 
@@ -43,10 +45,10 @@ const createCheckbox = (li)=>{
 
 
 
-const createDeleteTask = (li,i) =>{
+const createDeleteTask = (div,i) =>{
   const deleteTask = document.createElement('button');
   const excluir = document.createTextNode("Excluir");
-  li.appendChild(deleteTask);
+  div.appendChild(deleteTask);
   deleteTask.appendChild(excluir);
   deleteTask.addEventListener('click', ()=>{
       todoList.splice(i,1);
@@ -54,6 +56,7 @@ const createDeleteTask = (li,i) =>{
     } 
   )
 }
+
 
 
 
