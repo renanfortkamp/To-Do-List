@@ -16,25 +16,37 @@ addTask.addEventListener('click', function(){
 const createTask = ()=>{
     document.querySelector('ul').innerHTML = "";
     document.querySelector('input').value = "";
-  for(let i=0 ; i < todoList.length; i++){
-    let addTolist = document.querySelector('ul');
-    let li = document.createElement('li');
-    let check = document.createElement('input');
-    let task = document.createTextNode(todoList[i]);
-    let deleteTask = document.createElement('button');
-    let x = document.createTextNode("Excluir");
-    addTolist.appendChild(li);
-      li.appendChild(check);
-        check.type = 'checkbox'
-        document.querySelector('li').children[0].class = 'check'
-      li.appendChild(task);
-      li.appendChild(deleteTask);
-        deleteTask.appendChild(x);
-        deleteTask.addEventListener('click', ()=>{
-            todoList.splice(i,1);
-            createTask();
-          } 
-        )
+  for(let i= 0 ; i < todoList.length; i++){
+    const ul = document.querySelector('ul');
+    const li = document.createElement('li');
+    const task = document.createTextNode(todoList[i]);
+    ul.appendChild(li);
+    createCheckbox(li)
+    li.appendChild(task);
+    createDeleteTask(li,i);
   }
 }
 
+const createCheckbox = (li)=>{
+  const check = document.createElement('input');
+  li.appendChild(check);
+  check.type = 'checkbox';
+  check.classList.add("checked");
+  
+}
+
+const createDeleteTask = (li,i) =>{
+  const deleteTask = document.createElement('button');
+  const excluir = document.createTextNode("Excluir");
+  li.appendChild(deleteTask);
+  deleteTask.appendChild(excluir);
+  deleteTask.addEventListener('click', ()=>{
+      todoList.splice(i,1);
+      createTask();
+    } 
+  )
+}
+
+
+
+/* retorna index -> todoList.indexOf(document.querySelector('li').innerText.slice(0,-7)) */
