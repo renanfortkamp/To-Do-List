@@ -31,9 +31,17 @@ const createCheckbox = (li)=>{
   const check = document.createElement('input');
   li.appendChild(check);
   check.type = 'checkbox';
-  check.classList.add("checked");
+  check.classList.add('checkbox')
+  check.addEventListener('change', function(){
+	if(this.checked){	
+  	check.parentElement.classList.add('checked')
+  }else{
+	check.parentElement.classList.remove('checked')
+  }})
   
 }
+
+
 
 const createDeleteTask = (li,i) =>{
   const deleteTask = document.createElement('button');
@@ -46,6 +54,7 @@ const createDeleteTask = (li,i) =>{
     } 
   )
 }
+
 
 
 
