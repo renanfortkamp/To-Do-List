@@ -1,5 +1,5 @@
 
-const todoList = [];
+const todoList = [{input:"oi",done:false},{input:"teste",done:true}];
 
 addTask.addEventListener('click', function(){
   let task = document.querySelector('input').value;
@@ -7,7 +7,7 @@ addTask.addEventListener('click', function(){
     alert("Insira uma tarefa!")
   } else{
     let task = document.querySelector('input').value;
-    todoList.push({input:task});
+    todoList.push({input:task,done:false});
     createTask();
    }
   }
@@ -34,7 +34,13 @@ const createCheckbox = (li,i)=>{
   li.appendChild(check);
   check.type = 'checkbox';
   check.classList.add('checkbox')
-  todoList[i].done = false;
+  if(todoList[i].done == true){
+    check.checked = true;
+    check.parentElement.classList.add('checked')
+  } else{
+    check.checked = false;
+    check.parentElement.classList.remove('checked')
+  };
   check.addEventListener('change', function(){
 	if(this.checked){	
   	check.parentElement.classList.add('checked')
@@ -60,6 +66,7 @@ const createDeleteTask = (div,i) =>{
   )
 }
 
+createTask();
 
 
 
