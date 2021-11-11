@@ -47,7 +47,7 @@ const createCheckbox = (li)=>{
 
 const createDeleteTask = (div,i) =>{
   const deleteTask = document.createElement('button');
-  const excluir = document.createTextNode("Excluir");
+  const excluir = document.createTextNode("X");
   div.appendChild(deleteTask);
   deleteTask.appendChild(excluir);
   deleteTask.addEventListener('click', ()=>{
