@@ -7,7 +7,7 @@ addTask.addEventListener('click', function(){
     alert("Insira uma tarefa!")
   } else{
     let task = document.querySelector('input').value;
-    todoList.push(task);
+    todoList.push({input:task});
     createTask();
    }
   }
@@ -20,25 +20,28 @@ const createTask = ()=>{
     const ul = document.querySelector('ul');
     const div = document.createElement('div');	
     const li = document.createElement('li');
-    const task = document.createTextNode(todoList[i]);
+    const task = document.createTextNode(todoList[i].input);
     ul.appendChild(div);
     div.appendChild(li);
-    createCheckbox(li)
+    createCheckbox(li,i)
     li.appendChild(task);
     createDeleteTask(div,i);
   }
 }
 
-const createCheckbox = (li)=>{
+const createCheckbox = (li,i)=>{
   const check = document.createElement('input');
   li.appendChild(check);
   check.type = 'checkbox';
   check.classList.add('checkbox')
+  todoList[i].done = false;
   check.addEventListener('change', function(){
 	if(this.checked){	
   	check.parentElement.classList.add('checked')
+    todoList[i].done = true;
   }else{
 	check.parentElement.classList.remove('checked')
+  todoList[i].done = false;
   }})
   
 }
