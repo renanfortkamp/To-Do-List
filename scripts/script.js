@@ -1,14 +1,13 @@
-
-const todoList = [{input:"oi",done:false},{input:"teste",done:true}];
+let todoList = new Array();
 
 addTask.addEventListener('click', function(){
   let task = document.querySelector('input').value;
   if(task == ""){
-    alert("Insira uma tarefa!")
-  } else{
+    } else{
     let task = document.querySelector('input').value;
-    todoList.push({input:task,done:false});
+    todoList.push({textTask:task,done:false});
     createTask();
+    saveStorage()
    }
   }
 )
@@ -20,39 +19,38 @@ const createTask = ()=>{
     const ul = document.querySelector('ul');
     const div = document.createElement('div');	
     const li = document.createElement('li');
-    const task = document.createTextNode(todoList[i].input);
+    const task = document.createTextNode(todoList[i].textTask);
     ul.appendChild(div);
     div.appendChild(li);
     createCheckbox(li,i)
     li.appendChild(task);
     createDeleteTask(div,i);
-  }
-}
+  }}
+
 
 const createCheckbox = (li,i)=>{
   const check = document.createElement('input');
   li.appendChild(check);
   check.type = 'checkbox';
   check.classList.add('checkbox')
-  if(todoList[i].done == true){
-    check.checked = true;
-    check.parentElement.classList.add('checked')
-  } else{
-    check.checked = false;
-    check.parentElement.classList.remove('checked')
-  };
+    if(todoList[i].done == true){
+      check.checked = true;
+      check.parentElement.classList.add('checked')
+    } else{
+      check.checked = false;
+      check.parentElement.classList.remove('checked')
+    };
   check.addEventListener('change', function(){
-	if(this.checked){	
-  	check.parentElement.classList.add('checked')
-    todoList[i].done = true;
-  }else{
-	check.parentElement.classList.remove('checked')
-  todoList[i].done = false;
-  }})
-  
+    if(this.checked){	
+      check.parentElement.classList.add('checked')
+      todoList[i].done = true;
+      saveStorage();
+    }else{
+      check.parentElement.classList.remove('checked')
+      todoList[i].done = false;
+      saveStorage();
+    }})
 }
-
-
 
 const createDeleteTask = (div,i) =>{
   const deleteTask = document.createElement('button');
@@ -61,14 +59,24 @@ const createDeleteTask = (div,i) =>{
   deleteTask.appendChild(excluir);
   deleteTask.addEventListener('click', ()=>{
       todoList.splice(i,1);
+      saveStorage();
       createTask();
     } 
   )
 }
 
-createTask();
+const saveStorage = () =>{
+  localStorage.removeItem('todoList')
+  let list = JSON.stringify(todoList);
+  localStorage.setItem('todoList', list)
+}
 
-
-
-
-/* retorna index -> todoList.indexOf(document.querySelector('li').innerText.slice(0,-7)) */
+const loadStorage = () =>{
+  const local_storage = JSON.parse(localStorage.getItem('todoList'));
+  if(local_storage != null){
+    const local_storage = JSON.parse(localStorage.getItem('todoList'));
+    todoList = local_storage
+    createTask();
+  }
+}
+loadStorage();
