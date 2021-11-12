@@ -8,7 +8,7 @@ body{
   justify-content: center;
   align-items: center;
   width: 100vw;
-  background-color: rgb(252, 234, 190);
+  background-color: rgb(245, 251, 252);
 
 }
 form{
@@ -20,76 +20,81 @@ form{
   max-width: 500px;
   flex-direction: column;
   justify-content: center;
-  background-color: rgb(30, 210, 177);
-  border: 1px rgb(0, 0, 0) solid;
-  border-top-right-radius: 15px;
-  border-top-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  border-bottom-left-radius: 15px;
+  background-color: rgba(30, 210, 177, 0);
+  border: 1px rgba(0, 0, 0, 0) solid;
   padding-left: 3px;
   padding-right: 3px;
 }
 
-input{
-  border: 1px solid black;
-  border-bottom-left-radius: 15px;
-  border-top-left-radius: 15px;
-  padding-left: 10px;
-  height: 25px;
-  width:60%;
-  height: 1.8rem;
-  font-size: 1.4rem;
-}
-
-/* button adicionar */
-#addTask{
-  border: 1px solid black;
-  background-color: rgb(210, 210, 210);
-  cursor: pointer;
-  border-bottom-right-radius: 15px;
-  border-top-right-radius: 15px;
-  font-size: 1.4rem;
-}
-  
-
-div>button:hover{
-  background-color: rgb(176, 174, 174);  
-
-}
-
 label{
-  font-size: 3.4rem;
+  font-size: 3.8rem;
   width: 100%;
   text-align: center;
-  background-color: white;
-  background-color: rgb(30, 210, 177);
+  background-color: rgba(30, 210, 177, 0);
   border-top-right-radius: 15px;
   border-top-left-radius: 15px; 
   margin-bottom: 0.3;
   color: black;  
   transition: 1s;
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.207);
   padding-top: 5px;
   padding-bottom: 5px;;
-  margin-bottom: 15px;
+  margin-bottom: 19px;
+  
 }
 
 label:hover{
   letter-spacing: 1px;
 }
 
+input{
+  border: 1px solid black;
+  background-color: rgba(232, 231, 231, 0.097);
+  color: black;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  padding-left: 10px;
+  height: 25px;
+  width: 70%;
+  height: 1.8rem;
+  font-size: 1.4rem;
+  margin-right: 5px;
+  box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.638);
+}
+
+/* button adicionar */
+#addTask{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid rgb(76, 130, 124);
+  color: rgb(104, 144, 151);
+  background-color: rgba(255, 255, 240, 0);
+  cursor: pointer;
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+  width: 35px;
+  font-size: 3rem;
+  height: 35px;
+  box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.2);
+}
+  
+
+#addTask:hover{
+  border-color:rgb(43, 168, 196);
+  color: rgb(45, 174, 202);
+  box-shadow: 0 0 0.2rem rgb(0, 0, 0);
+
+}
+
 form>div{
   display: flex;
   justify-content: center;
 
-}
-
-header{
-  display: flex;
-  justify-content: center;   
-  border-bottom: 1px solid red;
-  width: 100%;
-  margin: 10px;
 }
 
 ul{
@@ -105,21 +110,22 @@ ul{
 ul div{
   width: 100%;
   display: flex;
-  border: 2px black solid;
+  border: 1px rgba(0, 0, 0, 0.344) solid;
   justify-content: space-between;
   align-items: center;
   border-bottom-left-radius: 15px;
   border-top-left-radius: 15px;
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
-  margin-bottom: 3px;
+  margin-bottom: 7px;
   margin-right: 10px;
   margin-left: 10px;
-  background-color: rgb(250, 163, 163);
+  background-color: rgba(232, 231, 231, 0.097);
+  box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.638);
 }
 
 ul div:hover{
-  background-color: rgb(255, 122, 122);
+  background-color: rgba(245, 245, 245, 0.597);
 
 }
 
@@ -142,29 +148,32 @@ li{
 .checkbox {
   width: 1.6rem;
   height: 1.6rem;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0);
   border-radius: 50%;
   vertical-align: middle;
   border: 2px solid rgb(0, 0, 0);
-  appearance: none;
-  -webkit-appearance: none;
+  appearance: none ;
   outline: none;
   cursor: pointer;
   margin-right: 5px;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0);
 }
 
 .checkbox:checked {
-  background-color: rgb(149, 255, 128);
+  background-color: rgb(200, 247, 255);
+  box-shadow: 0 0 0.2rem rgb(0, 0, 0);
+  border: 3px solid rgb(25, 44, 55);
 }
 .checkbox:hover{
-  
-  background-color: rgb(173, 251, 157);
+  background-color: rgb(200, 247, 255);
+  border: 3px solid rgb(25, 44, 55);
+  box-shadow: 0 0 0.2rem rgb(0, 0, 0);
 }
 ul button{
   margin-left: 5px;
   width: 1.7rem;
   height: 1.6rem;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0);
   border-radius: 50%;
   vertical-align: middle;
   border: 2px solid rgb(0, 0, 0);
@@ -181,5 +190,8 @@ ul button{
   /* background-image: url(imgs/trash.png); */
 }
 ul button:hover{
-    background-color: rgb(243, 252, 146);
+    color: rgb(255, 0, 0);
+    border: 3px solid rgb(25, 44, 55);
+    border-color: rgb(255, 0, 0);
+    box-shadow: 0 0 0.2rem rgb(0, 0, 0);
 }
