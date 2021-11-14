@@ -16,7 +16,7 @@ body{
 
 form{
   position: absolute;
-  top: 20px;
+  top: 0px;
   width: 90vw;
   padding: 0px;
   display: flex;
@@ -45,18 +45,13 @@ h1{
   
 }
 
-div{  
-  width: 95vw;
-  max-width: 500px;
-  min-width: 200px;
+div{
+  max-width: 600px;
+  min-width: 310px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 15px;
-
-}
-
-div{
+  margin-bottom: 18px;
   border: 1px solid rgba(0, 0, 0, 0);
   background-color: rgba(252, 252, 252, 0.693);
   color: black;
@@ -65,8 +60,14 @@ div{
   border-bottom-right-radius: 18px;
   border-bottom-left-radius: 18px;
   height: 38px;
-  width: 90%;
+  width: 80%;
   box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.638);
+}
+
+@media screen and (max-width: 400px) {
+  div{
+    width: 100%;
+  }
 }
 
 div>input{
@@ -97,11 +98,11 @@ div>input{
   border-top-left-radius: 16px;
   border-bottom-right-radius: 16px;
   border-bottom-left-radius: 16px;
-  margin-right: 4px;
   width: 30px;
-  font-size: 2.5rem;
   height: 30px;
+  font-size: 2.5rem;
   box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.672);
+  margin-right: 4px;
 }
  
 
