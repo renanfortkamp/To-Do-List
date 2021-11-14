@@ -22,8 +22,8 @@ const createList = ()=>{
     const label = document.createElement('label');
     const task = document.createTextNode(todoList[i].textTask);
     ul.appendChild(li);
-    createCheckbox(li,check)
-    li.appendChild(label)
+    createCheckbox(li,check);
+    li.appendChild(label); 
     label.appendChild(task);
     createDeleteTask(li,i);
     isChecked(i,check);
@@ -33,6 +33,8 @@ const createCheckbox = (li,check)=>{
   li.appendChild(check);
   check.type = 'checkbox';
   check.classList.add('checkbox')
+  check.name = "checkbox"
+
 }
 
 const isChecked = (i,check)=>{
@@ -60,13 +62,23 @@ const createDeleteTask = (li,i) =>{
   const excluir = document.createTextNode("X");
   li.appendChild(deleteTask);
   deleteTask.appendChild(excluir);
-  deleteTask.addEventListener('click', ()=>{
-      todoList.splice(i,1);
-      saveStorage();
-      createList();
+  deleteTask.name = "deleteTask"
+  deleteTask.addEventListener('click', (i)=>{
+      whishDelete(i);
     } 
   )
 }
+
+const whishDelete = (i) =>{
+  let erase = window.confirm("Você deseja excluir ?");
+  if(erase == true){
+  todoList.splice(i,1);
+  saveStorage();
+  createList();
+  }
+}
+
+
 
 const saveStorage = () =>{
   localStorage.removeItem('todoList')
