@@ -67,7 +67,7 @@ const isChecked = (i,check)=>{
 
 const createDeleteTask = (i,li) =>{
   const deleteTask = document.createElement('button');
-  const excluir = document.createTextNode("X");
+  const excluir = document.createTextNode("-");
   li.appendChild(deleteTask);
   deleteTask.appendChild(excluir);
   deleteTask.name = "deleteTask"
@@ -86,6 +86,15 @@ const whishDelete = (i) =>{
   }
 }
 
+deleteALL.addEventListener('click', ()=>{
+  let eraseAll = window.confirm('Você deseja realmente excluir todas as tarefas:');
+  if(eraseAll == true){
+    todoList.splice(0,todoList.length);
+    saveStorage();
+    createList();
+  }
+})
+
 const saveStorage = () =>{
   localStorage.removeItem('todoList')
   let list = JSON.stringify(todoList);
@@ -102,8 +111,6 @@ const loadStorage = () =>{
     createList();
   }
 }
-
-
 loadStorage();
 
 

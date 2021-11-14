@@ -2,6 +2,10 @@
   outline: 0;
 }
 
+*::selection{
+  background-color: none;
+}
+
 body{
   margin: 0px;
   display: flex;
@@ -10,8 +14,9 @@ body{
   width: 98vw;
   height: 100vh;
   background: #ef32d9;  
-  background: -webkit-linear-gradient(to right, #89fffd, #ef32d9);
+  background: -webkit-linear-gradient(to right, #89fffd, #ef32d9fc);
   background: linear-gradient(to right, #89fffd, #ef32d9);
+  background: linear-gradient(to right, #89fffd85, #ef323283);
 }
 
 form{
@@ -34,15 +39,14 @@ form{
 h1{
   display: flex;
   height: 32px;
-  font-size: 4rem;
+  font-size: 3rem;
   text-align: center;
   background-color: rgba(30, 210, 177, 0);
   color: black;  
-  transition: 1s;
   border-bottom: 1px solid rgba(0, 0, 0, 0.207);
   padding-top: 0px;
-  padding-bottom: 26px;;
-  margin-bottom: 35px;
+  padding-bottom: 12px;;
+  margin-bottom: 20px;
   
 }
 h1>img{
@@ -103,11 +107,35 @@ div>input{
   border-top-left-radius: 16px;
   border-bottom-right-radius: 16px;
   border-bottom-left-radius: 16px;
+  padding-top: 3px;
   width: 30px;
   height: 30px;
   font-size: 2.5rem;
   box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.672);
   margin-right: 4px;
+}
+
+/* button delete all tasks */
+#deleteALL{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid rgb(255, 0, 0);
+  color: rgb(255, 0, 0);
+  background-color: rgba(252, 252, 252, 0);
+  cursor: pointer;
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+  width: 30px;
+  height: 30px;
+  font-size: 0.8rem;
+  box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.672);
+  margin-right: 4px;
+  font-weight: bolder;
+
 }
  
 
@@ -169,36 +197,36 @@ label{
   margin-left: 5px;
   margin-right: 5px;
   box-shadow: 0 0 1em rgba(0, 0, 0, 0);
-  background-color: rgb(154, 253, 141);
+  background-color: rgb(117, 207, 255);
   box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.57);
   border: 3px solid rgb(25, 44, 55);
 }
 
 .checkbox:checked {
-  margin-left: 6.49px;
+  margin-left: 6.1px;
   width: 23px;
   height: 23px;
   background-color: rgb(84, 114, 84);
   box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.57);
   border: 3px solid rgb(25, 44, 55);
-  margin-right: 6.5px;
+  margin-right: 6.87px;
 }
 
+/* Delete Task */
 li button{
-  margin-left: 5px;
   width: 26px;
   height: 26px;
   background-color: rgba(255, 255, 255, 0);
   border-radius: 50%;
-  appearance: none;
-  outline: none;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: bolder;
   text-align: center;
+  padding-bottom: 7.7px;
   margin-right: 5px;
+  margin-left: 5px;
+  font-size: 2.9rem;
   color: rgb(255, 0, 0);
   border: 2.5px solid rgb(255, 0, 0);
   box-shadow: 0 0 0.2rem rgb(0, 0, 0);
