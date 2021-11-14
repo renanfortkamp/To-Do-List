@@ -168,10 +168,9 @@ label{
 }
 
 .checkbox:checked {
-  margin-left: 6.5px;
+  margin-left: 6.49px;
   width: 23px;
   height: 23px;
-  transition: 0.2s;
   background-color: rgb(141, 192, 141);
   box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.57);
   border: 3px solid rgb(25, 44, 55);
