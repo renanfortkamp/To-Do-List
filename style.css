@@ -12,10 +12,8 @@ body{
   background: #ef32d9;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #89fffd, #ef32d9);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #89fffd, #ef32d9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-/* background-image: url(imgs/fundoMar.jpg);
-  background-size: cover;
-  background-repeat: no-repeat; */
 }
+
 form{
   position: absolute;
   top: 20px;
@@ -173,11 +171,12 @@ label{
   margin-left: 6.49px;
   width: 23px;
   height: 23px;
-  background-color: rgb(141, 192, 141);
+  background-color: rgb(84, 114, 84);
   box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.57);
   border: 3px solid rgb(25, 44, 55);
   margin-right: 6.5px;
 }
+
 li button{
   margin-left: 5px;
   width: 26px;
