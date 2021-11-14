@@ -1,15 +1,21 @@
-let todoList = new Array();
+const todoList = new Array();
+
+const form = document.getElementById('form')
+form.addEventListener('submit', e => {
+    e.preventDefault()
+})
 
 addTask.addEventListener('click', function(){
-  if(todoList.length < 10){let task = document.querySelector('input').value;
-  if(task == ""){
-    } else{
+  if(todoList.length < 13){
     let task = document.querySelector('input').value;
-    todoList.push({textTask:task,done:false});
-    createList();
-    saveStorage()
-   }} else {
-     alert("Limite de tarefas atingido!")
+    if(task == ""){
+      } else{
+      let task = document.querySelector('input').value;
+      todoList.push({textTask:task,done:false});
+      createList();
+      saveStorage()
+    }} else {
+      alert("Limite de tarefas atingido!")
    }
   }
 )
@@ -27,7 +33,7 @@ const createList = ()=>{
     createCheckbox(li,check);
     li.appendChild(label); 
     label.appendChild(task);
-    createDeleteTask(li,i);
+    createDeleteTask(i,li);
     isChecked(i,check);
   }}
 
@@ -59,28 +65,26 @@ const isChecked = (i,check)=>{
   }})
 }
 
-const createDeleteTask = (li,i) =>{
+const createDeleteTask = (i,li) =>{
   const deleteTask = document.createElement('button');
   const excluir = document.createTextNode("X");
   li.appendChild(deleteTask);
   deleteTask.appendChild(excluir);
   deleteTask.name = "deleteTask"
-  deleteTask.addEventListener('click', (i)=>{
+  deleteTask.addEventListener('click', ()=>{
       whishDelete(i);
     } 
   )
 }
 
 const whishDelete = (i) =>{
-  let erase = window.confirm("Você deseja excluir ?");
+  let erase = window.confirm("Você deseja realmente excluir esta tarefa?");
   if(erase == true){
   todoList.splice(i,1);
   saveStorage();
   createList();
   }
 }
-
-
 
 const saveStorage = () =>{
   localStorage.removeItem('todoList')
@@ -92,9 +96,14 @@ const loadStorage = () =>{
   const local_storage = JSON.parse(localStorage.getItem('todoList'));
   if(local_storage != null){
     const local_storage = JSON.parse(localStorage.getItem('todoList'));
-    todoList = local_storage
+    for(i=0; i < local_storage.length;i++){
+      todoList.push(local_storage[i])
+    }
     createList();
   }
 }
+
+
 loadStorage();
+
 
