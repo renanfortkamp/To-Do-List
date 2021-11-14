@@ -6,7 +6,7 @@ form.addEventListener('submit', e => {
 })
 
 addTask.addEventListener('click', function(){
-  if(todoList.length < 30){
+  if(todoList.length < 100){
     let task = document.querySelector('input').value;
     if(task == ""){
       } else{
