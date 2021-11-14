@@ -7,7 +7,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  width: 98vw;
   height: 100vh;
   background: #ef32d9;  
   background: -webkit-linear-gradient(to right, #89fffd, #ef32d9);
@@ -16,7 +16,7 @@ body{
 
 form{
   position: absolute;
-  top: 0px;
+  top: -25px;
   width: 90vw;
   padding: 0px;
   display: flex;
@@ -32,7 +32,8 @@ form{
 } 
 
 h1{
-  line-height: 2rem;
+  display: flex;
+  height: 32px;
   font-size: 4rem;
   text-align: center;
   background-color: rgba(30, 210, 177, 0);
@@ -40,9 +41,13 @@ h1{
   transition: 1s;
   border-bottom: 1px solid rgba(0, 0, 0, 0.207);
   padding-top: 0px;
-  padding-bottom: 5px;;
+  padding-bottom: 26px;;
   margin-bottom: 35px;
   
+}
+h1>img{
+  height: 60px;
+
 }
 
 div{
@@ -141,9 +146,10 @@ li:hover{
 }
 
 label{
-  text-overflow: clip;
+  text-overflow: ellipsis;
   font-size: 1.4rem;
   margin-right: auto;
+  height: fit-content;
 }
 
 .checked{
