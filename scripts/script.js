@@ -1,13 +1,15 @@
 let todoList = new Array();
 
 addTask.addEventListener('click', function(){
-  let task = document.querySelector('input').value;
+  if(todoList.length < 10){let task = document.querySelector('input').value;
   if(task == ""){
     } else{
     let task = document.querySelector('input').value;
     todoList.push({textTask:task,done:false});
     createList();
     saveStorage()
+   }} else {
+     alert("Limite de tarefas atingido!")
    }
   }
 )
