@@ -76,11 +76,12 @@ div{
   height: 38px;
   width: 80%;
   box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.638);
+  transition: 1s;
 }
 
 @media screen and (max-width: 400px) {
   div{
-    width: 100%;
+    width: 90vw;
   }
 }
 
@@ -88,7 +89,7 @@ div>input{
   color: black;
   padding-left: 10px;
   height: 30px;
-  width: 100%;
+  width: 80%;
   height: 38px;
   font-size: 1.4rem;
   margin-right: 5px;
@@ -218,7 +219,6 @@ label{
 li button{
   display: flex;
   justify-content: center;
-  padding-top: 7px;
   line-height: 0px;
   width: 26px;
   height: 26px;
@@ -227,7 +227,9 @@ li button{
   cursor: pointer;
   margin-right: 5px;
   margin-left: 5px;
-  font-size: 2em;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: tahoma;
   color: rgb(255, 0, 0);
   border: 2.5px solid rgb(255, 0, 0);
   box-shadow: 0 0 0.2rem rgb(0, 0, 0);
