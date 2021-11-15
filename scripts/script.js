@@ -72,12 +72,12 @@ const createDeleteTask = (i,li) =>{
   deleteTask.appendChild(excluir);
   deleteTask.name = "deleteTask"
   deleteTask.addEventListener('click', ()=>{
-      whishDelete(i);
+      whishDeleteThis(i);
     } 
   )
 }
 
-const whishDelete = (i) =>{
+const whishDeleteThis = (i) =>{
   let erase = window.confirm("Você deseja realmente excluir esta tarefa?");
   if(erase == true){
   todoList.splice(i,1);
