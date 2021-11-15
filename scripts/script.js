@@ -67,7 +67,7 @@ const isChecked = (i,check)=>{
 
 const createDeleteTask = (i,li) =>{
   const deleteTask = document.createElement('button');
-  const excluir = document.createTextNode("_");
+  const excluir = document.createTextNode('|');
   li.appendChild(deleteTask);
   deleteTask.appendChild(excluir);
   deleteTask.name = "deleteTask"
