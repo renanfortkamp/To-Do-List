@@ -1,3 +1,8 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+
 *:focus-visible{
   outline: 0;
 }
@@ -15,7 +20,7 @@ body{
 
 form{
   position: absolute;
-  top: -25px;
+  top: 10px;
   width: 90vw;
   padding: 0px;
   display: flex;
@@ -40,7 +45,7 @@ h1{
   border-bottom: 1px solid rgba(0, 0, 0, 0.207);
   padding-top: 0px;
   padding-bottom: 12px;;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   
 }
 h1>img{
@@ -54,7 +59,7 @@ div{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 18px;
+  margin-bottom: 30px;
   border: 1px solid rgba(0, 0, 0, 0);
   background-color: rgba(252, 252, 252, 0.693);
   color: black;
@@ -206,7 +211,7 @@ label{
 
 /* Delete Task */
 li button{
-  transform: rotate(-90deg);
+  /* transform: rotate(-90deg); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -217,9 +222,8 @@ li button{
   cursor: pointer;
   margin-right: 5px;
   margin-left: 5px;
-  padding-bottom: 5px;
-  font-weight: bolder;
-  font-size: 19px;
+  padding-bottom: 4.1px;
+  font-size: 40px;
   font-family: verdana;
   color: rgb(255, 0, 0);
   border: 2.5px solid rgb(255, 0, 0);
