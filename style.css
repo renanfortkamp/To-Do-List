@@ -15,7 +15,7 @@ body{
   width: 98vw;
   height: 100vh;
   background: #ffffff;  
-  background: linear-gradient(to left, #f7f7f7bd, #a7bfbebf);
+  background: linear-gradient(to left, #ffffffbd, #d0e2e2bf);
 }
 
 form{
@@ -222,8 +222,9 @@ li button{
   cursor: pointer;
   margin-right: 5px;
   margin-left: 5px;
-  padding-bottom: 4.1px;
-  font-size: 40px;
+  line-height: 0px;
+  padding-bottom: 4px;
+  font-size: 35px;
   font-family: verdana;
   color: rgb(255, 0, 0);
   border: 2.5px solid rgb(255, 0, 0);
