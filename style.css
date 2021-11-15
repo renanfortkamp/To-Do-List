@@ -2,8 +2,13 @@
   outline: 0;
 }
 
-*::selection{
+*::selection,{
   background-color: none;
+}
+
+*:focus{
+  background-color: none;
+
 }
 
 body{
@@ -13,10 +18,10 @@ body{
   align-items: center;
   width: 98vw;
   height: 100vh;
-  background: #ef32d9;  
+  background: #ffffff;  
   background: -webkit-linear-gradient(to right, #89fffd, #ef32d9fc);
   background: linear-gradient(to right, #89fffd, #ef32d9);
-  background: linear-gradient(to right, #89fffd85, #ef323283);
+  background: linear-gradient(to right, #89fffdbd, #ef3232bf);
 }
 
 form{
@@ -103,11 +108,10 @@ div>input{
   color: rgb(112, 140, 250);
   background-color: rgba(252, 252, 252, 0);
   cursor: pointer;
-  border-top-right-radius: 16px;
-  border-top-left-radius: 16px;
-  border-bottom-right-radius: 16px;
-  border-bottom-left-radius: 16px;
-  padding-top: 3px;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
   width: 30px;
   height: 30px;
   font-size: 2.5rem;
@@ -125,10 +129,7 @@ div>input{
   color: rgb(255, 0, 0);
   background-color: rgba(252, 252, 252, 0);
   cursor: pointer;
-  border-top-right-radius: 16px;
-  border-top-left-radius: 16px;
-  border-bottom-right-radius: 16px;
-  border-bottom-left-radius: 16px;
+  border-radius: 50%;
   width: 30px;
   height: 30px;
   font-size: 0.8rem;
@@ -169,8 +170,8 @@ li{
 }
 
 li:hover{
-    background-color: rgba(255, 255, 255, 0.83);
-    box-shadow: 0 0 0.4em rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.83);
+  box-shadow: 0 0 0.4em rgb(0, 0, 0);
 }
 
 label{
@@ -206,7 +207,7 @@ label{
   margin-left: 6.1px;
   width: 23px;
   height: 23px;
-  background-color: rgb(84, 114, 84);
+  background-color: rgb(84, 104, 114);
   box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.57);
   border: 3px solid rgb(25, 44, 55);
   margin-right: 6.87px;
@@ -223,7 +224,7 @@ li button{
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-bottom: 7.7px;
+  padding-bottom: 7px;
   margin-right: 5px;
   margin-left: 5px;
   font-size: 2.9rem;
