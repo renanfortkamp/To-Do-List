@@ -15,7 +15,7 @@ body{
   width: 98vw;
   height: 100vh;
   background: #ffffff;  
-  background: linear-gradient(to left, #e9ebffbf, rgb(255, 255, 255),  #e9ebffbf);
+  background: linear-gradient(to left, #e6e6e6bf, #f5f5f5bf,  #e6e6e6bf);
 }
 
 form{
