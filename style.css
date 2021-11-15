@@ -2,15 +2,6 @@
   outline: 0;
 }
 
-*::selection,{
-  background-color: none;
-}
-
-*:focus{
-  background-color: none;
-
-}
-
 body{
   margin: 0px;
   display: flex;
@@ -19,9 +10,7 @@ body{
   width: 98vw;
   height: 100vh;
   background: #ffffff;  
-  background: -webkit-linear-gradient(to right, #89fffd, #ef32d9fc);
-  background: linear-gradient(to right, #89fffd, #ef32d9);
-  background: linear-gradient(to right, #89fffdbd, #ef3232bf);
+  background: linear-gradient(to left, #f7f7f7bd, #a7bfbebf);
 }
 
 form{
@@ -217,9 +206,10 @@ label{
 
 /* Delete Task */
 li button{
+  transform: rotate(-90deg);
   display: flex;
   justify-content: center;
-  line-height: 0px;
+  align-items: center;
   width: 26px;
   height: 26px;
   background-color: rgba(255, 255, 255, 0);
@@ -227,9 +217,10 @@ li button{
   cursor: pointer;
   margin-right: 5px;
   margin-left: 5px;
-  font-weight: bold;
-  font-size: 20px;
-  font-family: tahoma;
+  padding-bottom: 5px;
+  font-weight: bolder;
+  font-size: 19px;
+  font-family: verdana;
   color: rgb(255, 0, 0);
   border: 2.5px solid rgb(255, 0, 0);
   box-shadow: 0 0 0.2rem rgb(0, 0, 0);
