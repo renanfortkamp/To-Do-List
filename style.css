@@ -74,7 +74,7 @@ h1>img{
 }
 
 @media screen and (max-width: 400px) {
-  div{
+  #conteinerInputText{
     width: 90vw;
   }
 }
