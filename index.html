@@ -11,16 +11,16 @@
 </head>
 <body>
     
-    <form id="form">
+    <form id="conteinerGeral" >
         <h1>
             <img src="imgs/check.png" alt="Todo List Icon"> To-Do List
         </h1>
-        <div>
-            <input type="text" name="writeTask" maxlength="100" placeholder="Digite neste campo.">
+        <div id="conteinerInputText">
+            <input type="text" id="textArea" name="writeTask" maxlength="50" placeholder="Digite neste campo.">
             <button id="addTask" name="addTask">+</button>
             <button id="deleteALL" name="deleteAll">All</button>
         </div>
-        <ul>
+        <ul id="conteinerList">
     
         </ul>
     </form>
