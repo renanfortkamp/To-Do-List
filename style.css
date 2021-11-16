@@ -100,8 +100,8 @@ h1>img{
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 3px solid rgb(112, 140, 250);
-  color: rgb(112, 140, 250);
+  border: 3px solid rgb(117, 137, 218);
+  color: rgb(124, 145, 228);
   background-color: rgba(252, 252, 252, 0);
   cursor: pointer;
   border-top-right-radius: 50%;
@@ -195,7 +195,7 @@ h1>img{
   margin-left: 5px;
   margin-right: 5px;
   box-shadow: 0 0 1em rgba(0, 0, 0, 0);
-  background-color: rgb(117, 207, 255);
+  background-color: rgb(137, 161, 255);
   box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.57);
   border: 3px solid rgb(25, 44, 55);
 }
