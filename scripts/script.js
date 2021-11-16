@@ -1,6 +1,7 @@
+/* variavel abaixo responsavel por armazenar as tarefas */
 const todoList = new Array();
 
-const form = document.getElementById('form')
+const form = document.getElementById('conteinerGeral')
 form.addEventListener('submit', e => {
     e.preventDefault()
 })
@@ -29,12 +30,14 @@ const createList = ()=>{
     const li = document.createElement('li');
     const label = document.createElement('label');
     const task = document.createTextNode(todoList[i].textTask);
-    ul.appendChild(li);
-    createCheckbox(li,check);
-    li.appendChild(label); 
-    label.appendChild(task);
-    createDeleteTask(i,li);
-    isChecked(i,check);
+      ul.appendChild(li);
+      createCheckbox(li,check);
+      li.appendChild(label); 
+      label.appendChild(task);
+      createDeleteButton(i,li);
+      isChecked(i,check);
+      li.classList.add('taskList');
+      label.classList.add('textTask');     
   }}
 
 const createCheckbox = (li,check)=>{
@@ -65,24 +68,25 @@ const isChecked = (i,check)=>{
   }})
 }
 
-const createDeleteTask = (i,li) =>{
+const createDeleteButton = (i,li) =>{
   const deleteTask = document.createElement('button');
   const excluir = document.createTextNode('I');
   li.appendChild(deleteTask);
-  deleteTask.appendChild(excluir);
-  deleteTask.name = "deleteTask"
-  deleteTask.addEventListener('click', ()=>{
-      whishDeleteThis(i);
-    } 
-  )
+    deleteTask.appendChild(excluir);
+    deleteTask.name = "deleteTask"
+    deleteTask.classList.add('deleteTask');   
+      deleteTask.addEventListener('click', ()=>{
+          deleteThisTask(i);
+        } 
+      )
 }
 
-const whishDeleteThis = (i) =>{
+const deleteThisTask = (i) =>{
   let erase = window.confirm("Você deseja realmente excluir esta tarefa?");
   if(erase == true){
-  todoList.splice(i,1);
-  saveStorage();
-  createList();
+    todoList.splice(i,1);
+    saveStorage();
+    createList();
   }
 }
 
@@ -111,6 +115,7 @@ const loadStorage = () =>{
     createList();
   }
 }
+
 loadStorage();
 
 
